@@ -1,0 +1,10 @@
+# GitLab Pages: publikuje zawartość katalogu public/ (raport mieszkań)
+pages:
+  image: alpine:latest
+  script:
+    - echo "Publikuję raport"
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
